@@ -12,9 +12,9 @@ if parse_version(pil.__version__)>=parse_version('10.0.0'):
 from moviepy.editor import VideoFileClip, CompositeVideoClip
 
 # Input and output folders
-speaking_folder = "C:\\Users\\HP\\OneDrive\\Desktop\\JOSH\\SHORTFORM\\batch9" 
-gameplay_folder = "C:\\Users\\HP\\OneDrive\\Desktop\\JOSH\\GAMEPLAY"  
-output_folder = "C:\\Users\\HP\\OneDrive\\Desktop\\JOSH\\CLIPS\\batch9"  
+speaking_folder = "" 
+gameplay_folder = ""  
+output_folder = ""   
 
 # Create output folder if it doesn't exist
 if not os.path.exists(output_folder):
@@ -88,4 +88,5 @@ combinations = [(s, g) for s in speaking_files for g in gameplay_files]  # All p
 # Process combinations sequentially
 if __name__ == '__main__':
     for speaking_file, gameplay_file in combinations:
+
         process_combination(speaking_file, gameplay_file)
